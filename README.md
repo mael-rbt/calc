@@ -8,7 +8,7 @@ Une application de calculatrice développée avec **Node.js** et **Express**, te
 
 1. **Cloner le projet** :
    ```bash
-   git clone <url-du-dépôt>
+   git clone https://github.com/mael-rbt/calc/
    cd calculatrice
 
 2. **Installer les dépendances** :
