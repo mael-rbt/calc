@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Architects Daughter", cursive;
+}
+
+body {
+  background-color: #8B5A2B;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23603813' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  color: #3E2723;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  line-height: 1.6;
+}
+img{
+  position: absolute;
+  right: 0;
+  width: 40vw;
+}
+
+body .cave-wall {
+  background-color: #D2B48C;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  border: 12px solid #8B4513;
+  border-style: ridge;
+}
+body .cave-wall .title {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+body .cave-wall .title .cave-title {
+  font-size: 3rem;
+  color: #5D4037;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  transform: rotate(-2deg);
+  line-height: 0.5;
+}
+
+.cave-drawings {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.small{
+  font-size: 12px;
+}
+
+.drawing {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.drawing-hand {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23603813' d='M50,10 C55,25 65,30 70,35 C75,40 80,50 75,60 C70,70 60,75 50,70 C40,65 35,55 30,45 C25,35 20,25 25,15 C30,5 45,0 50,10 Z'/%3E%3C/svg%3E");
+}
+
+.drawing-mammoth {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23603813' d='M10,70 C15,60 25,65 35,60 C45,55 60,50 70,55 C80,60 85,70 80,80 C75,90 65,85 55,80 C45,75 35,70 25,75 C15,80 5,80 10,70 Z M75,55 C80,45 85,35 80,25 C75,15 65,20 60,30 M20,75 C15,85 10,90 15,95 M30,75 C25,85 20,90 25,95'/%3E%3C/svg%3E");
+  width: 60px;
+}
+
+.stone-tablet {
+  background-color: #A67C52;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 8px solid #8B4513;
+  border-style: inset;
+}
+
+.stone-tablet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23603813' fill-opacity='0.2' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.result {
+  text-align: center;
+}
+
+.cave-result {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3E2723;
+}
+
+.stone-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+input[type=number]{
+  font-size: 22px;
+  font-weight: 700;
+}
+input[type=number]:focus{
+  outline: none;
+}
+
+.stone-input {
+  background-color: #D2B48C;
+  border: 5px solid #8B4513;
+  border-style: inset;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #3E2723;
+  width: 100%;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.stone-input::-moz-placeholder {
+  color: #8D6E63;
+  opacity: 0.7;
+}
+
+.stone-input::placeholder {
+  color: #8D6E63;
+  opacity: 0.7;
+}
+
+.stone-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stone-select {
+  background-color: #D2B48C;
+  border: 5px solid #8B4513;
+  border-style: inset;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 2rem;
+  color: #3E2723;
+  flex: 1;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.stone-button {
+  background-color: #8B4513;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  color: #FFF8E1;
+  cursor: pointer;
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.stone-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23603813' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='10' cy='30' r='2'/%3E%3Ccircle cx='30' cy='10' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.stone-button:hover {
+  background-color: #A0522D;
+  transform: translateY(-2px);
+}
+
+.stone-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stone-button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.history-title {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #3E2723;
+}
+
+.cave-history {
+  list-style-type: none;
+  padding: 10px;
+  min-height: 100px;
+  background-color: #C8B393;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.clear-button {
+  width: 100%;
+  background-color: #37190e;
+}
+
+.clear-button:hover {
+  background-color: #8D6E63;
+}
+
+@media (max-width: 600px) {
+  .stone-controls {
+    flex-direction: column;
+  }
+  .cave-title {
+    font-size: 2.5rem;
+  }
+}

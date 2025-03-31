@@ -1,84 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Ma Calculatrice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Calculatrice</title>
   </head>
   <body>
-    <h1>Calculatrice</h1>
-
-    <label for="valueA">Nombre A:</label>
-    <input type="number" id="valueA" />
-
-    <label for="valueB">Nombre B:</label>
-    <input type="number" id="valueB" />
-
-    <select id="operation">
-      <option value="add">+</option>
-      <option value="subtract">-</option>
-      <option value="multiply">*</option>
-    </select>
-    <button id="calculateBtn">Calculer</button>
-
-    <div>
-      <h2>Résultat: <span id="result">?</span></h2>
-    </div>
-
-    <div>
-      <h2>Historique</h2>
-      <ul id="historyList"></ul>
-      <button id="clearHistoryBtn">Effacer l'historique</button>
-    </div>
-    
-    <script>
-        const valueA = document.getElementById('valueA');
-        const valueB = document.getElementById('valueB');
-        const operation = document.getElementById('operation');
-        const calculateBtn = document.getElementById('calculateBtn');
-        const resultSpan = document.getElementById('result');
-        const historyList = document.getElementById('historyList');
-        const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+    <img src="/assets/img.png">
+    <section class="cave-wall">
+      <div class="title">
+        <h1 class="cave-title">Calculatrice<br/><span class="small">(j'ai pas trouvé mieux comme titre)</span></h1>
+        <div class="cave-drawings">
+          <span class="drawing drawing-hand"></span>
+          <span class="drawing drawing-mammoth"></span>
+          <span class="drawing drawing-hand"></span>
+        </div>
+      </div>
       
-        // Fonction pour calculer
-        async function calculate() {
-          const a = valueA.value;
-          const b = valueB.value;
-          const op = operation.value;
-          try {
-            const response = await fetch('/calculate', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ a, b, operation: op })
-            });
-            const data = await response.json();
-            resultSpan.textContent = data.result;
-            await updateHistory();
-          } catch (error) {
-            console.error(error);
-          }
-        }
+      <div class="result stone-tablet">
+        <h2>Résultat: <span id="result" class="cave-result">?</span></h2>
+      </div>
       
-        // Fonction pour mettre à jour l’historique
-        async function updateHistory() {
-          const response = await fetch('/history');
-          const data = await response.json();
-          historyList.innerHTML = '';
-          data.history.forEach((item) => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            historyList.appendChild(li);
-          });
-        }
+      <div class="app">
+        <div class="stone-inputs">
+          <input type="number" id="valueA" class="stone-input" placeholder="Premier caillou"/>
+          <input type="number" id="valueB" class="stone-input" placeholder="Deuxième caillou"/>
+        </div>
+        
+        <div class="stone-controls">
+          <select id="operation" class="stone-select">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+          </select>
+          
+          <button id="calculateBtn" class="stone-button">
+            <span class="stone-button-text">Calculer caillou</span>
+          </button>
+        </div>
+      </div>
       
-        // Fonction pour effacer l’historique
-        async function clearHistory() {
-          await fetch('/history', { method: 'DELETE' });
-          resultSpan.textContent = '?';
-          historyList.innerHTML = '';
-        }
-      
-        calculateBtn.addEventListener('click', calculate);
-        clearHistoryBtn.addEventListener('click', clearHistory);
-      </script>      
+      <div class="logs stone-tablet">
+        <h2 class="history-title">Préhistorique</h2>
+        <ul id="historyList" class="cave-history"></ul>
+        <button id="clearHistoryBtn" class="stone-button clear-button">
+          <span class="stone-button-text">Effacer Préhistoire</span>
+        </button>
+      </div>
+    </section>
+    <script src="/assets/script.js"></script>      
   </body>
 </html>
